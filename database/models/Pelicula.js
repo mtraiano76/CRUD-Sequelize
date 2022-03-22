@@ -51,5 +51,5 @@ module.exports = function (sequelize, dataTypes){
         });
 
     }
-    return Palicula;
+    return Pelicula;
 }

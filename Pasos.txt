@@ -9,4 +9,13 @@ copiar el contenido archjico sequelizerc https://dev.to/nedsoft/getting-started-
 en terminal correr sequelize init: cre carpeta database con sus sub carpetas (config / migrations / models /seeders)
 
 dentro de carpeta /database/config en archivo config: agregamso como primer linea module.exports, luego colocar contraseña y nombre a al base de datos
-dentro de /database/models creamos archivo Actor.js - Genero.js - pelicula.js
+dentro de /database/models creamos archivo Actor.js - Genero.js - pelicula.js, copio por ejemplo lo que figura en el archivo users.js creado por el express generator y lo pego en peliculas .js
+luego debo vincular las rutas en app.js y le digo que todas las rutas que empiecen con peliculas, van a ser respondidas por peliculasRouter (app.use('/peliculas', peliculasRouter))
+despues debemos crear el require porque la variable no la tenemos declarada, en el mismo app.js var peliculasRouter = require('./routes/peliculas')
+
+# peliculas.js
+    router.get ("/crear", peliculasController.crear) vamos a crear la variable para requerir el
+    var peliculasController=require('./controllers/peliculasController') 
+
+CREAR CARPETA controllers - archivo peliculasControllers.js
+
