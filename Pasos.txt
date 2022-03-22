@@ -1,0 +1,12 @@
+express repaso --ejs
+npm install
+npm install -g --save sequelize sequelize-cli
+npm install --save mysql2
+
+crear archivo .sequelizerc
+copiar el contenido archjico sequelizerc https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp
+
+en terminal correr sequelize init: cre carpeta database con sus sub carpetas (config / migrations / models /seeders)
+
+dentro de carpeta /database/config en archivo config: agregamso como primer linea module.exports, luego colocar contraseña y nombre a al base de datos
+dentro de /database/models creamos archivo Actor.js - Genero.js - pelicula.js
