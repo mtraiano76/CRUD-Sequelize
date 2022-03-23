@@ -1,20 +1,13 @@
 let db = require ("../database/models");
 
-let peliculasControllers ={
-    crear: function (req, res,){
+let peliculasController = {
+    crear: function (req, res,) {
         db.Genero.findAll()
-        .then(function(generos){
-            return res.render("listadosPeliculas", {generos:generos});
+        .then(function(generos) {
+            return res.render("listadoPeliculas", {generos:generos});
 
         })
 
-
-
-
-
-
-
-
     }
 }
-module.exports = peliculasControllers;
+module.exports = peliculasController;
