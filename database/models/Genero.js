@@ -22,7 +22,7 @@ module.exports = function (sequelize, dataTypes){
     Genero.associate = function(models) {
         Genero.hasMany(models.Pelicula, {
             as:"peliculas",
-            foreignKey: "genre_id"
+            foreignKey:"genre_id"
 
         });
 
