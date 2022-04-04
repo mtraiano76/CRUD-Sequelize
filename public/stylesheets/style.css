@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:lightslategray;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:rgb(255, 255, 255);
 }
 
 a {

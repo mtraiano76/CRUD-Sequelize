@@ -5,6 +5,9 @@
             Duracion: <%=pelicula.length%></li>
         </li>
         <li> 
+            Fecha de estreno: <%=pelicula.release_date%></li>
+        </li>
+        <li> 
             Premios: <%=pelicula.awards%></li>
         </li>
         <li> 
@@ -15,11 +18,20 @@
         </li>
         <li> 
             Actores
-            <ul> 
-                
+            <ul>
+                <%  for (let i = 0; i < pelicula.actores.length; i ++) { %>
+                    <li>
+                        <%=pelicula.actores[i].first_name%> <%=pelicula.actores[i].last_name%>
+                    </li>           
+                <% } %>
             </ul>
-         </li>
+        </li>
     </ul>
-
-
+    <a href="/peliculas/editar/<%=pelicula.id%>">
+        <button>Editar</button>
+    </a>
+    <form action="/peliculas/borrar/<%=pelicula.id%>" method="POST">
+        <button type="submit">Borrar</button>
+    </form>
+        
 <%- include('footer') -%>
