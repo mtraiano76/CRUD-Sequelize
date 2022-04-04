@@ -11,4 +11,8 @@ router.post("/crear", peliculasController.guardado);
 //Lectura
 router.get ("/",peliculasController.listado);
 
+//Detalle
+
+router.get("/:id", peliculasController.detalle);
+
 module.exports = router;

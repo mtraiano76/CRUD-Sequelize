@@ -24,6 +24,14 @@ let peliculasController = {
             .then(function (peliculas) {
                 res.render("listadoPeliculas", {peliculas:peliculas})
             })
+    }, 
+    detalle: function (req, res){
+        db.Pelicula.findByPk(req.params.id, {
+            include: [{association: "genero"} , {association: "actores"}]
+        })
+        .then(function (pelicula) {
+            res.render("detallePelicula", {pelicula:pelicula});
+        })
     }
 
 }
